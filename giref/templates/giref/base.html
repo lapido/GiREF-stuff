@@ -1,0 +1,87 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href='{% static "css/materialize.css" %}'  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href='{% static "css/style_m.css" %}'  media="screen,projection"/>
+      
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>{% block title %}{% endblock title %}</title>
+    </head>
+
+    <body>
+
+      <div class="navbar-fixed">
+        
+        <nav>
+          <div class="nav-wrapper teal lighten-1"><!-- blue lighten-3 -->
+            <!-- <div class="container" style="width:100%">
+              <div class="row">
+                <div class="col s12 offset-s1">
+                  <a href=""><img src='{% static "img/giref-logo.png" %}' style="height:40px; margin-top:10px"></a>
+                </div>
+              </div>
+            </div> -->
+            <div id="nav-class">
+              <a href=""><img src='{% static "img/giref-logo.png" %}' style="height:40px; margin-top:10px"></a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="{% block navbar_home %}{% endblock %}"><a href="{% url 'giref:index' %}">Home</a></li>
+                <li class="{% block navbar_about %}{% endblock %}"><a href="{% url 'giref:about-us' %}">About Us</a></li>
+                <li class="{% block navbar_contact %}{% endblock %}"><a href="{% url 'giref:contact-us' %}">Contact Us</a></li>
+                <li><a class="waves-effect white btn-large call-to-action" id="section" href="{% block join_us %}{% endblock %}">Join Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+
+      <div>
+        {% block content %}
+
+        {% endblock content %}
+      </div>
+
+   <footer class="page-footer teal lighten-1">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">GiREF</h5>
+                <p class="grey-text text-lighten-4">Empowering our teenagers</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Menu</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="{% url 'giref:index' %}">Home</a></li>
+                  <li><a class="grey-text text-lighten-3" href="{% url 'giref:about-us' %}">About Us</a></li>
+                  <li><a class="grey-text text-lighten-3" href="{% url 'giref:contact-us' %}">Contact Us</a></li>
+                  <li><a class="grey-text text-lighten-3" href="{% url 'giref:join-us' %}">Join Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © Copyright 2016 GiREF
+            <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
+            </div>
+          </div>
+        </footer>
+
+
+
+
+      <!--Import jQuery before materialize.js-->
+      <script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
+      <script type="text/javascript" src='{% static "js/materialize.js" %}'></script>
+      <script type="text/javascript" src='{% static "js/init.js" %}'></script>
+
+     
+    </body>
+  </html>
+        

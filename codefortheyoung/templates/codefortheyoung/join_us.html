@@ -1,0 +1,72 @@
+{% extends 'codefortheyoung/base.html' %}
+
+{% block content %}
+{% csrf_token %}
+<div class="container" id="join-body">
+	<div class="row">
+		<div class="col l6 s12 offset-l3 card">
+			
+
+
+			<div class="row" id="join-form">
+			<form class="col s12">
+			<div class="row">
+			<div class="input-field col s12">
+			<!-- <input placeholder="Placeholder" id="first_name" type="text" class="validate"> -->
+			{{form.first_name}}
+			<label for="first_name">First Name</label>
+
+			</div>
+
+			</div>
+
+			<div class="row">
+			<div class="input-field col s12">
+			<!-- <input placeholder="Placeholder" id="first_name" type="text" class="validate"> -->
+			{{form.last_name}}
+			<label for="first_name">Last Name</label>
+
+			</div>
+
+			</div>
+
+			<div class="row">
+			<div class="input-field col s12">
+			{{form.email}}
+			<label for="email">Email</label>
+			</div>
+			</div>
+
+			
+			<div class="row">
+			<div class="input-field col s12">
+			
+			{{form.country}}
+			<label>Country</label>
+			</div>
+			</div>
+
+			<div class="row">
+			<div class="input-field col s12">
+			<!-- <input placeholder="Placeholder" id="first_name" type="text" class="validate"> -->
+			{{form.state}}
+			<label for="first_name">State</label>
+
+			</div>
+
+			</div>
+			
+			
+			<li><a class="waves-effect customize btn-large call-to-action" href="#">Join Us</a></
+			</form>
+			</div>
+        
+
+
+
+		</div>
+	</div>
+</div>
+
+
+{% endblock content %}

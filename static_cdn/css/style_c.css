@@ -1,0 +1,119 @@
+
+
+.effect{
+	position : absolute; 
+	width : 100%;
+	background-color:  rgba(0, 0, 0, .8); 
+	height: 500px;
+	top: 0;
+}
+.customize{
+	background-color: #2B0000;
+}
+.customize-text{
+	color: #2B0000;
+}
+.logo-text{
+	font-weight: 900%;
+	font-size: 200%;
+	margin-left: 10px;
+}
+
+#abt-body{
+	margin:90px;
+}
+#abt-body img{
+	height: 300px;
+	margin-top:20px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+#abt-body #abt-text{
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	margin-left: 0px;
+	text-align: justify;
+}
+#abt-body .container{
+	width:900px;
+}
+#abt-text h5{
+	font-weight: 900px;
+
+}
+@media only screen and (max-width : 600px) {
+	#abt-body > .img-d{
+		
+
+	}
+	#abt-body img{
+		height: 150px;
+
+	}
+	#abt-text{
+		margin-left: 20px;
+	}
+	#abt-body{
+		margin: 10px;
+	}
+	#abt-body .container{
+		width: 250px;
+	}
+	#abt-body #abt-text{
+		margin: 20px;
+
+	}
+	#abt-text h5{
+		text-align: center;
+	}
+}
+
+.pos-text{
+	text-align: center;
+}
+
+.btn-a{
+	margin-left: 70px;
+}
+
+#teens-project h3{
+	color: white;
+}
+
+.test-div{
+	margin-top: 20px;
+}
+
+.test-div img{
+	
+	width: 500px;
+}
+
+#metric h1{
+	text-align: center;
+}
+#metric h6{
+	text-align: center;
+	padding-bottom: 20px;
+
+}
+
+#join-form{
+	margin: 20px;
+}
+
+#join-body{
+	margin-top: 30px;
+}
+
+#teens-project p{
+	text-align: justify;
+	margin-top: -10px;
+}
+
+#metric h6{
+	margin-top: -30px;
+	font-weight: bold;
+	font-size: 100%;
+}

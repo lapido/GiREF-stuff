@@ -1,0 +1,122 @@
+{% extends 'giref/base.html' %}
+{% load staticfiles %}
+ 
+{%block title %}{{ title }}{% endblock %}
+{% block navbar_home %}active{% endblock %}
+{% block join_us %}#join-us{% endblock %}
+{% block content %}
+
+      <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+          <div class="container">
+            <br><br>
+
+            <div class="bg-header">
+              <h1>Building <br>African<br> Teenagers</h1>
+            </div>
+          </div>
+        </div>
+        <div class="parallax">
+          <img src='{% static "img/background_cty.jpg" %}' class="hoverable">
+        </div>
+      </div>
+
+
+
+      <div class="teal lighten-1" style="" id="about">
+        <div class="container">
+          <h3>{{object_list.header}}</h3>
+          <p>
+            {{object_list.content}}
+          </p>
+        </div>
+      </div>
+
+      <div class="container" id="projects">
+        <h3>Our Projects</h3>
+
+        <div class="row">
+          
+        
+        {% for pro in giref_project %}
+           <div class="col s12 m12 l4">
+          <!--  <img src="{{pro.image.url}}" class="responsive-img">
+            <h5><bold>{{pro.header}}</bold></h5>
+            <p>{{pro.content}}</p>
+ -->
+              <div class="card medium">
+              <div class="card-image">
+                <img src="{{pro.image.url}}" class="responsive-img">
+                
+              </div>
+              <div class="card-content">
+              <span class="card-title center">{{pro.header}}</span>
+                <p>{{pro.content}}</p>
+              </div>
+              <!-- <div class="card-action">
+                <a href="#">This is a link</a>
+              </div> -->
+            </div>
+          </div>
+
+        {% endfor %}
+        </div>
+
+       <!--  <div class="row">
+          <div class="col s12 m12 l4">
+            <img src="{% static 'img/colla.jpg' %}">
+            <h5><bold>Leadership Training</bold></h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+          </div>
+          <div class="col s12 m12 l4">
+            <img src="{% static 'img/ipad.png' %}">
+            <h5><bold>Code for the young</bold></h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+          </div>
+
+          <div class="col s12 m12 l4">
+            <img src="{% static 'img/hack.jpg' %}">
+            <h5><bold>Career Talk</bold></h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+          </div>
+          </div> -->
+          
+        </div>
+        
+      
+      <div class="parallax-container section scrollspy" id="join-us">
+
+        <div class="section no-pad-bot">
+          <div class="container">
+            <br><br>
+
+            <div class="center-align">
+              <h1>Do you want to support us in empowering our teenagers?</h1>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="UX9BEUKSTTL58">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>
+
+              <a class="waves-effect waves-light btn-large" href="{% url 'giref:join-us' %}">Join Us</a>
+            </div>
+          </div>
+        </div>
+
+        <div  class="parallax">
+          <img src="{% static 'img/background.jpg' %}">    
+        </div>
+      </div>
+
+      
+
+{%endblock %}
+     
+

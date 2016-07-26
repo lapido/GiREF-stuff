@@ -1,0 +1,42 @@
+{% extends 'giref/base.html' %}
+{% load staticfiles %}
+{% block navbar_about %}active{% endblock %}
+{% block join_us %}{% url 'giref:join-us' %}{% endblock %}
+{% block content %}
+
+<div>
+
+	<div class="parallax-container" id="about_pa">
+		<div  class="parallax">
+          <img src="{% static 'img/what_3.jpg' %}">    
+        </div>
+	</div>
+
+	<div class="container">
+		
+		<div class="row" id="mission">
+			<div class="col s6 offset-s3">
+				<div class="row">
+					<h4>{{vision.header}}</h4>
+					<p>{{vision.content}}</p>
+				</div>
+
+				<div class="row">
+					<h4>{{mission.header}}</h4>
+					<p>{{mission.content}}</p>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	<div id="about_r">
+		<div class="container">
+			<h4>{{about.header}}</h4>
+			<p>{{about.content}}
+			</p>
+		</div>
+	</div>
+</div>
+{% endblock content %}

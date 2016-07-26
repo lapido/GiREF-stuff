@@ -1,0 +1,231 @@
+body{
+	
+}
+
+.navbar-custom{
+	/*background-color: #428bca;*/
+}
+
+.divider_1{
+	height: 2px;
+	margin: auto;
+	background-color: #FFCC00;
+	color: #FFCC00;
+	border: 0 none;
+}
+
+.divider_2{
+	height: 3px;
+	margin: auto;
+	background-color: #FF0000;
+	color: ##FF0000;
+	border: 0 none;
+}
+
+.divider_3{
+	height: 3px;
+	margin: auto;
+	background-color: #337AB7;
+	color: #337AB7;
+	border: 0 none;
+}
+.center-content{
+	padding-top:50px;
+}
+
+.center-content h1{
+	font-size: 42px;
+}
+.blockq{
+	background-color: white;
+
+}
+
+.board_img{
+	height:300px; width:100%;padding:5px;
+
+}
+
+#phil{
+	padding-top: 20%;
+}
+
+#mission_abt{
+	margin-top:90px;
+}
+
+.container > h1{
+	text-align: center;
+
+}
+
+#about_main{
+	background-color: white;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+#about_main > p{
+	text-align: justify;
+}
+
+#about_main > h1{
+	color:#FFCC00;
+}
+
+.intro-divider_edit {
+    width: 400px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    margin-bottom:0px;
+    margin-top:0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*style for code-for-the-young*/
+#main_title{
+	margin-top: -10px;
+}
+.about_intro{
+	padding-top:50px;
+}
+
+.desc_img{
+	height: 200px
+
+}
+
+.intro-divider_cty{
+	margin-top:50px;
+	margin-bottom: 50px;
+	width: 400px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    background-color: #7FBA00;
+}
+.intro-div{
+	margin-top:50px;
+	margin-bottom: 50px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    background-color: #7FBA00;	
+}
+.desc h3{
+	font-size: 100%;
+	text-align: center;
+	font-weight: 600;
+}
+.desc > p{
+	text-align: center;
+	font-size: 17px;
+}
+
+.btn-outline{
+	background-color: #7FBA00;
+	color:white;
+	width:300px;
+}
+
+#footerWrapper{
+	background-color: #121212;
+	margin-top: 20px;
+}
+
+.heading{
+	padding-top: -80px
+}
+
+.box{
+	margin-top: -30px
+}
+.section-footer{
+	margin-top: 30px;
+}
+
+.container h2{
+	font-family:serif;
+	font-size: 250%;
+	font-weight: 900;
+}
+.container h3{
+	font-family:serif;
+	font-size: 120%;
+	font-weight: 500;
+}
+.container p{
+	font-family: 'play';
+	font-weight: lighter;
+}
+p{
+	font-family: serif;
+}
+
+.section-header_2{
+	border-bottom: 4px solid #7fba00 !important;
+	height: 400px;
+	position: relative;
+  	overflow-y: hidden;
+  	background-attachment: fixed;
+}
+
+.section-header_2 div.bg-effect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+  top: 0;
+}
+/* line 28, ../scss/modules/_sections.scss */
+.section-header_2 div.dark-bg-effect {
+  background: url("../img/colla.jpg");
+  z-index: -2 !important;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 60%;
+}
+
+
+
+
+
+.img-middle{
+	margin-top: 30px;
+	border-bottom: 4px solid #7fba00 !important;
+	height: 300px;
+	position: relative;
+  	overflow-y: hidden;
+  	background-attachment: fixed;
+}
+.img-middle div.bg-effect{
+	position: absolute;
+	width:100%;
+	height: 100%;
+  	background-color: rgba(0, 0, 0, 0.3);
+  	z-index: -1;
+  	/*top: 0;*/
+}
+.img-middle div.dark-bg-effect{
+	background: url("../img/hack.jpg");
+  	z-index: -2 !important;
+  	background-attachment: fixed;
+  	background-repeat: no-repeat;
+  	background-size: 100% 100%;
+}
+
+.jus p{
+	text-align: justify;
+}
+
+.jus h4{
+	font-size: 100%;
+	font-weight: 600;
+}

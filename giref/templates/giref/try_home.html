@@ -1,0 +1,89 @@
+{% extends 'giref/base.html' %}
+{% load staticfiles %}
+ 
+
+{% block content %}
+
+      <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+          <div class="container">
+            <br><br>
+
+            <div class="bg-header">
+              <h1>Building <br>African<br> Teenagers</h1>
+            </div>
+          </div>
+        </div>
+        <div class="parallax">
+          <img src='{% static "img/background_cty.jpg" %}' class="hoverable">
+        </div>
+      </div>
+
+
+
+      <div class="teal lighten-1" style="" id="about">
+        <div class="container">
+          <h3>About</h3>
+          <p>
+            We are of the opinion that Africa's problems are foundational, we seek to address
+            these problems from the root by organizing career talks and empowerment programmes for teenagers
+            because these teenagers are the future of Africa.
+          </p>
+        </div>
+      </div>
+
+      <div class="container" id="projects">
+        <h3>Our Projects</h3>
+
+        <div class="row">
+          <div class="col s12 m12 l4">
+            <img src="{% static 'img/colla.jpg' %}">
+            <h5><bold>Leadership Conference</bold></h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+          </div>
+          <div class="col s12 m12 l4">
+            <img src="{% static 'img/ipad.png' %}">
+            <h5><bold>Code for the young</bold></h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+          </div>
+
+          <div class="col s12 m12 l4">
+            <img src="{% static 'img/hack.jpg' %}">
+            <h5><bold>Career Talk</bold></h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+          </div>
+          </div>
+          
+        </div>
+        
+      
+      <div class="parallax-container" id="donate">
+
+        <div class="section no-pad-bot">
+          <div class="container">
+            <br><br>
+
+            <div class="center-align">
+              <h1>Do you want to support us in empowering our teenagers?</h1>
+              <a class="waves-effect waves-light btn-large">Donate</a>
+              <a class="waves-effect waves-light btn-large">Join Us</a>
+            </div>
+          </div>
+        </div>
+
+        <div  class="parallax">
+          <img src="{% static 'img/background.jpg' %}">    
+        </div>
+      </div>
+
+      
+
+{%endblock %}
+     
+

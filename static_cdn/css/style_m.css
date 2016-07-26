@@ -1,0 +1,208 @@
+.parallax-container{
+	min-height: 380px;
+	line-height: 0;
+	height: auto;
+	
+}
+#about_pa{
+	min-height: 300px;
+}
+.parallax-container .section{
+	width: 100%;
+}
+
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+  
+}
+#nav-class{
+  	margin-left: 20px;
+  	margin-right: 20px;
+  }
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+  #nav-class{
+  	margin-left: 0px;
+  	margin-right: 0px;
+  }
+  #join-us .container h1{
+  	margin-top: -70px;
+  	font-size: 200%;
+
+  }
+}
+
+.bg-header{
+	margin: auto;
+	margin-left: -15px;
+	margin-right: -15px;
+	margin-top: 50px;
+}
+
+@media (min-width: 992px){
+	.bg-header{
+		margin-left: 50%
+	}
+}
+
+.bg-header h1{
+	margin-top: 30px;
+	font-size: 80px;
+	font-weight: bolder;
+	color: #26A69A;
+	text-align: right;
+	line-height: 1;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 13, ../scss/modules/_blocks.scss */
+  .bg-header h1 {
+    font-size: 45px;
+    margin-top: 15px;
+    vertical-align: middle;
+    line-height: 2;
+    font-weight: bolder;
+
+  }
+}
+
+.valign h5{
+	text-align: center;
+}
+
+
+#about{
+	height:200px; position:relative; color:white;
+}
+
+@media screen and (max-width: 767px){
+	#about{
+		height: 300px;  position:relative; color:white;
+	}
+}
+#about h3{
+	margin-top:0px; padding-top:20px; text-align:center;
+	font-size: 300%;
+
+}
+
+#about p{
+	text-align:center;
+	font-size: 130%
+
+}
+
+#projects{
+	margin-top: 50px;
+}
+#projects h3{
+	text-align: center;
+}
+#projects h5{
+	font-weight: bolder;
+	font-size: 15px;
+	margin: 0px;
+	margin-top: 5px;
+	text-align: center;
+}
+#projects p{
+	text-align: justify;
+}
+
+#projects img{
+	height: 200px;
+}
+
+#join-us{
+	color:white;
+}
+
+#mission h4{
+	text-align: center;
+}
+#mission p{
+	text-align: center;
+}
+
+#about_r{
+	background-color: #26A69A;
+	color: white;
+	margin: 20px;
+}
+
+#about_r p{
+	text-align: justify;
+	padding-bottom: 80px;
+}
+#about_r h4{
+	text-align: center;
+	padding-top: 20px;
+}
+#about_r > .container{
+	
+}
+#form h5{
+	text-align: center;
+}
+
+#form{
+	margin-top: 50px;
+}
+
+#form .form{
+	margin-top: 20px;
+}
+
+#form-container{
+	margin-top: 40px;
+	width: 100%;
+}
+
+#contact div{
+	margin-bottom: 40px;
+}
+
+#contact h4{
+	color: #26A69A;
+}
+
+#social img{
+	height: 50px;
+	margin: 0px;
+}
+#social div{
+	margin: 0px;
+}
+#social{
+	width:100%;
+}
+
+#contact-header{
+	font-weight: bolder;
+	font-size: 120%;
+	margin-bottom: -30px;
+}
+
+.call-to-action{
+	color: #26A69A;
+	font-weight: bolder;
+}
+
+.join-us{
+	margin-top: 50px;
+}
+
+.join-us p{
+	font-weight: bolder;
+	font-size: 100%;
+	margin-bottom: -20px;
+}

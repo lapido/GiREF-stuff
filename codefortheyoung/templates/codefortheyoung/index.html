@@ -1,0 +1,274 @@
+{% extends 'codefortheyoung/base.html' %}
+{% load staticfiles %}
+	
+{% block content %}
+  	<div class="parallax-container">
+      
+      <!-- <div class="parallax">
+      <img src="{% static 'img/background.jpg' %}">
+       <div class="effect">
+    	
+    </div>
+ -->
+		<div class="slider">
+			<ul class="slides">
+				<li>
+					<img src="{% static 'img/my.jpg' %}"> 
+					 <div class="effect">
+    	
+    				 </div>
+					<div class="caption center-align">
+					  <h3>This is our big Tagline!</h3>
+					  <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+					</div>
+				</li>
+			<li>
+				<img src="{% static 'img/background.jpg' %}">
+				<div class="effect">
+    	
+    			</div>
+				<div class="caption left-align">
+				  <h3>Left Aligned Caption</h3>
+				  <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+				</div>
+			</li>
+			<li>
+				<img src="{% static 'img/my.jpg' %}">
+				<div class="effect">
+    	
+    				 </div> 
+				<div class="caption right-align">
+				  <h3>Right Aligned Caption</h3>
+				  <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+				</div>
+			</li>
+			<li>
+				<img src="{% static 'img/background_cty.jpg' %}">
+				<div class="effect">
+    	
+    			</div>
+				<div class="caption center-align">
+				  <h3>This is our big Tagline!</h3>
+				  <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+				</div>
+			</li>
+			</ul>
+		</div>
+      </div>
+    <!-- </div> -->
+   
+
+
+   	<div id="abt-body">
+   		<div class="white container">
+   			<div class="row">
+   				
+					<div class="col l6 s12">
+						<img src="{% static 'img/what_3.jpg' %}" class="right-align">
+					</div>
+					<div class="col l6 s12">
+						<div id="abt-text">
+							<h5 class="customize-text">Who we are</h5>
+							<p>{{query_1.content}}</p>
+
+						</div>
+					</div>
+   				
+   			</div>
+   		</div>
+   		
+   	</div>
+
+   	<div class="customize white">
+   		<div class="container">
+   			<div class="row">
+   				<div class="col s12 l4">
+   					<div class="card-panel customize hoverable">
+   						<span class="white-text">
+   							<div class="pos-text"><h6>I'll like to start up a young coders' club in my area</h6></div><br/>
+   							<a class="waves-effect white btn customize-text btn-a">Start</a>
+   						</span>
+   					</div>
+   				</div>
+   				<div class="col s12 l4">
+   					<div class="card-panel customize hoverable">
+   						<span class="white-text">
+   							<div class="pos-text"><h6>I'm a teenager, I want to join a young coders' club</h6></div><br/>
+   							<a class="waves-effect white btn center-align customize-text btn-a">Join</a>
+   						</span>
+   					</div>
+   				</div>
+   				<div class="col s12 l4">
+   					<div class="card-panel customize hoverable">
+   						<span class="white-text">
+   							<div class="pos-text"><h6>I'm a programmer, I'll like to volunteer</h6></div><br/>
+   							<a class="waves-effect white btn center-align customize-text btn-a">Volunteer</a>	
+   						</span>
+   					</div>
+   				</div>
+   			</div>
+   		</div>
+   	</div>
+
+   	<div id="teens-project">
+   		<div>
+   			<h3 class="center-align">Check out teenagers' projects</h3>
+   		</div>
+   		<div class="container">
+		<div class="row">
+			{% for obj in query_2 %}
+				<div class="col l4 s12">
+				<div class="card">
+					<div class="card-image waves-effect waves-block waves-light">
+						<img src="{{obj.image.url}}" class="activator" style="height:200px">
+					</div>
+					<span class="card-title center"><h5>{{obj.name}}</h5></span>
+					<div class="card-content">
+						<p>{{obj.content}}</p>
+					</div>
+					
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+   	</div>
+
+   	</div>
+
+	<div class="container white hide-on-med-and-down">
+		<div class="row">
+			<div class="col s12">
+				<ul class="tabs">
+					<li class="tab col s3"><a class="active" href="#test1">Teachers' testimonies</a></li>
+					<li class="tab col s3"><a class="active" href="#test2">Teenagers' testimonies</a></li>
+					<li class="tab col s3"><a href="#test3">Volunteers' testimonies</a></li>
+				</ul>
+			</div>
+
+			<div class="container">
+				<div id="test1" class="col s12 white">
+					{% for teacher in teachers %}
+					<div class="row valign-wrapper test-div">
+						<div class="col s2">
+							<img src="{{teacher.image.url}}" alt="" class="circle responsive-img">
+						</div>
+						<div class="col s10">
+							<p class="black-text">{{teacher.content}}</p>
+							<h6>{{teacher.name}}</h6>
+						</div>
+					</div>
+					{% endfor %}
+
+				</div>
+				<div id="test2" class="col s12 white">
+					
+					{% for teen in teenagers %}
+					<div class="row valign-wrapper test-div">
+						<div class="col s2">
+							<img src="{{teen.image.url}}" alt="" class="circle responsive-img">
+						</div>
+						<div class="col s10">
+							<p class="black-text">{{teen.content}}</p>
+							<h6>{{teen.name}}</h6>
+						</div>
+					</div>
+					{% endfor %}
+
+				</div>
+				<div id="test3" class="col s12 white">
+					{% for vol in volunteers %}
+					<div class="row valign-wrapper test-div">
+						<div class="col s2">
+							<img src="{{vol.image.url}}" alt="" class="circle responsive-img">
+						</div>
+						<div class="col s10">
+							<p class="black-text">{{vol.content}}</p>
+							<h6>{{vol.name}}</h6>
+						</div>
+					</div>
+					{% endfor %}
+
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	<div class="hide-on-large-only container">
+		
+		<h3 class="center-align" id="test">Testimonies</h3>
+
+		<div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="{{teachers.first.image.url}}" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+                {{teachers.first.content}}
+              </span><br/>
+              <span class="card-title c-t">{{teachers.first.name}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="{{teenagers.first.image.url}}" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+                {{teenagers.first.content}}
+              </span><br/>
+              <span class="card-title c-t">{{teenagers.first.name}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="{{volunteers.first.image.url}}" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+                {{volunteers.first.content}}
+              </span><br/>
+              <span class="card-title c-t">{{volunteers.first.name}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+	</div>
+
+
+	<div class="customize white" id="metric">
+   		<div class="container">
+   			<div class="row">
+   				<div class="col s12 l4">
+   					<h1>{{len_students}}</h1>
+   					<h6>African teenagers trained</h6>
+
+   				</div>
+   				<div class="col s12 l4">
+   					<h1>0</h1>
+   					<h6>Young coders' club created</h6>
+   				</div>
+   				<div class="col s12 l4">
+   					<h1>{{len_projects}}</h1>
+   					<h6>Projects</h6>
+   				</div>
+   			</div>
+   		</div>
+   	</div>
+
+
+
+{% endblock %}

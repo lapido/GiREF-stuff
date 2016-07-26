@@ -1,0 +1,103 @@
+{% extends 'giref/base.html' %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+{% block navbar_contact %}active{% endblock %}
+{% block join_us %}{% url 'giref:join-us' %}{% endblock %}
+
+{% block content %}
+
+<div>
+	<div class="parallax-container" id="about_pa">
+		<div  class="parallax">
+	      <img src="{% static 'img/what_3.jpg' %}">    
+	    </div>
+	</div>
+	<div class="container"  id="form">
+{% csrf_token %}
+	<div class="row">
+		
+		<div class="col s12 m8 l9">
+			<div>
+				<h6 id="contact-header">Do you need more information about GiREF and our upcoming programmes?</h6>
+
+				<div class="container" id="form-container">
+					<div class="row">
+						
+						<form class="col s12">
+							<div class="row">
+								<div class="input-field col s12 m12 l6">
+									<!-- <input id="first_name" type="text" class="validate"> -->
+									<label for="first_name">First Name</label>
+									{{form.first_name}}
+								</div>
+								
+							</div>
+
+							<div class="row">
+								<div class="input-field col s12 m12 l6">
+									<!-- <input id="first_name" type="text" class="validate"> -->
+									<label for="second_name">Second Name</label>
+									{{form.second_name}}
+								</div>
+								
+							</div>
+
+							<div class="row">
+								<div class="input-field col s12 m12 l6">
+									<!-- <input id="email" type="email" class="validate"> -->
+									<label for="email">Email</label>
+									{{form.sender | attr:"for:email"}}
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="input-field col s6">
+									<!-- <textarea id="textarea1" class="materialize-textarea"></textarea> -->
+	      							 <label for="textarea1">Textarea</label> 
+	      							
+	      							{{form.message|add_class:"materialize-textarea"}}
+								</div>
+							</div>
+							
+							<div class="row">
+								<!-- <a class="waves-effect waves-light btn-large">Submit</a> -->
+								<button type="submit" class="waves-effect waves-light btn-large">Submit</button>
+							</div>
+							
+						</form>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col s12 m4 l3" id="contact">
+			<div>
+				<h4>EMAIL</h4>
+				<h6>giref.youthworld@gmail.com</h6>
+			</div>
+			<div>
+				<h4>TELEPHONE</h4>
+				<h6>+2348166900602</h6>
+				<h6>+2348135228218</h6>
+			</div>
+			<div>
+				<div class="container" id="social">
+					<div class="row">
+						<div class="col s6">
+							<img src="{% static 'img/facebook_img.png' %}">
+				
+						</div>
+						<div class="col s6" style="margin-left:-50px">
+							<img src="{% static 'img/twitter_img.png' %}">			
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+{% endblock content %}
