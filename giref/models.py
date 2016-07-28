@@ -17,3 +17,17 @@ class GirefProject(models.Model):
 
 	def __str__(self):
 		return(self.header)
+
+class WebsiteType(models.Model):
+	name = models.CharField(max_length=30)
+
+	def __str__(self):
+		return(self.name)
+
+class Banner(models.Model):
+	website = models.ForeignKey(WebsiteType, on_delete=models.CASCADE)
+	page = models.CharField(max_length=50)
+	image = models.FileField(null=False)
+	caption = models.CharField(max_length=100, null=True, blank=True)
+	slider = models.BooleanField("Is the Image part of a set of slider?",default=False)
+

@@ -14,7 +14,8 @@ class JoinForm(forms.Form):
 	email = forms.EmailField(required=True)
 	country = forms.ChoiceField(choices=list(countries))
 	state = forms.CharField(required=True, max_length=100)
-	address = forms.CharField(required=True, max_length=100)
+	# address = forms.CharField(required=True, max_length=100)
+	phonenumber = forms.CharField(required=True)
 	#join_option = forms.CharField(choices=choice_options,default="Pick an option")
 	
 	def __init__(self, *args, **kwargs):

@@ -12,46 +12,18 @@
  -->
 		<div class="slider">
 			<ul class="slides">
+				{% for slide in slides %}
 				<li>
-					<img src="{% static 'img/my.jpg' %}"> 
-					 <div class="effect">
-    	
-    				 </div>
-					<div class="caption center-align">
-					  <h3>This is our big Tagline!</h3>
-					  <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+					<img src="{{ slide.image.url }}">
+					<div class="effect">
+	    	
+	    			</div>
+					<div class="caption right-align">
+					  <h3>{% autoescape off %}{{slide.caption}} {% endautoescape %}</h3>
+					  <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
 					</div>
 				</li>
-			<li>
-				<img src="{% static 'img/background.jpg' %}">
-				<div class="effect">
-    	
-    			</div>
-				<div class="caption left-align">
-				  <h3>Left Aligned Caption</h3>
-				  <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-				</div>
-			</li>
-			<li>
-				<img src="{% static 'img/my.jpg' %}">
-				<div class="effect">
-    	
-    				 </div> 
-				<div class="caption right-align">
-				  <h3>Right Aligned Caption</h3>
-				  <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-				</div>
-			</li>
-			<li>
-				<img src="{% static 'img/background_cty.jpg' %}">
-				<div class="effect">
-    	
-    			</div>
-				<div class="caption center-align">
-				  <h3>This is our big Tagline!</h3>
-				  <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-				</div>
-			</li>
+				{% endfor %}
 			</ul>
 		</div>
       </div>
@@ -82,7 +54,7 @@
    	<div class="customize white">
    		<div class="container">
    			<div class="row">
-   				<div class="col s12 l4">
+   				<div class="col s12 l4 m4">
    					<div class="card-panel customize hoverable">
    						<span class="white-text">
    							<div class="pos-text"><h6>I'll like to start up a young coders' club in my area</h6></div><br/>
@@ -90,7 +62,7 @@
    						</span>
    					</div>
    				</div>
-   				<div class="col s12 l4">
+   				<div class="col s12 l4 m4">
    					<div class="card-panel customize hoverable">
    						<span class="white-text">
    							<div class="pos-text"><h6>I'm a teenager, I want to join a young coders' club</h6></div><br/>
@@ -98,7 +70,7 @@
    						</span>
    					</div>
    				</div>
-   				<div class="col s12 l4">
+   				<div class="col s12 l4 m4">
    					<div class="card-panel customize hoverable">
    						<span class="white-text">
    							<div class="pos-text"><h6>I'm a programmer, I'll like to volunteer</h6></div><br/>
