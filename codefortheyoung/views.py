@@ -15,6 +15,7 @@ def index(request):
 	query_set_Teen = Testimony.objects.filter(testimony_type = 2).order_by('-id')[:3]
 	query_set_V = Testimony.objects.filter(testimony_type = 3).order_by('-id')[:3]
 	query_set_b = Banner.objects.filter(slider=True).order_by('-id')
+	query_set_4 = Banner.objects.get(page="sponsor_section")
 
 	len_projects = TeenProject.objects.count()
 	len_students = Student.objects.count()
@@ -30,6 +31,7 @@ def index(request):
 		"len_students" : len_students,
 		"len_club" : len_club,
 		"slides":query_set_b,
+		"sponsor":query_set_4,
 
 	}
 	return render(request, 'codefortheyoung/index.html', context)
@@ -42,6 +44,9 @@ def join(request):
 
 def join_us(request):
 	form = JoinForm(request.POST or None)
+	context = {
+			"form":form
+			}
 	if form.is_valid():
 		first_name = forms.cleaned_data['first_name']
 		last_name = forms.cleaned_data['last_name']
@@ -54,33 +59,33 @@ def join_us(request):
 		from_email = settings.EMAIL_HOST_USER
 		to_email = [from_email]
 
-		message = """
+		if first_name and email and phonenumber:
+			message = """
 			First Name: %s \n
 			Last Name: %s \n
 			Email Address: %s \n
 			Country: %s \n
 			State: %s \n
 			Phone Number: %s \n
-		""" %(first_name,
-			last_name,
-			email,
-			country,
-			state,
-			phonenumber)
-		email_state = send_mail(subject, message, from_email, to_email,fail_silently=False)
+			""" %(first_name,
+				last_name,
+				email,
+				country,
+				state,
+				phonenumber)
+			
+		
+			try:
+				g = send_mail(subject, message, from_email, to_email,fail_silently=False)
+				if g == 1:
+					return render(request, 'codefortheyoung/join_us.html', context)
+				else:
+					return HttpResponse('Mail was unable to send')	
+			except:
+				return HttpResponse('Mail was unable to send')
 
-		if email_state:
-			state = "confirm"
-			context = {
-				state:state
-			}
-			render(request, 'codefortheyoung/join.html', context)
+	
 		else:
-			state = "error"
-			render(request, 'codefortheyoung/join.html', context)
-
-	context = {
-		"form":form
-	}
+			return HttpResponse('Make sure all fields are entered and valid')
 
 	return render(request, 'codefortheyoung/join_us.html', context)

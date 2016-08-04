@@ -18,7 +18,7 @@
 					<div class="effect">
 	    	
 	    			</div>
-					<div class="caption right-align">
+					<div class="caption center-align">
 					  <h3>{% autoescape off %}{{slide.caption}} {% endautoescape %}</h3>
 					  <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
 					</div>
@@ -31,7 +31,7 @@
    
 
 
-   	<div id="abt-body">
+   	<div id="abt-body" class="section scrollspy">
    		<div class="white container">
    			<div class="row">
    				
@@ -40,7 +40,7 @@
 					</div>
 					<div class="col l6 s12">
 						<div id="abt-text">
-							<h5 class="customize-text">Who we are</h5>
+							<h5 class="customize-text" style="">Who we are</h5>
 							<p>{{query_1.content}}</p>
 
 						</div>
@@ -51,7 +51,7 @@
    		
    	</div>
 
-   	<div class="customize white">
+   	<div class="customize white" id="join-us-sec">
    		<div class="container">
    			<div class="row">
    				<div class="col s12 l4 m4">
@@ -84,7 +84,7 @@
 
    	<div id="teens-project">
    		<div>
-   			<h3 class="center-align">Check out teenagers' projects</h3>
+   			<h3 class="center-align">Participants' Projects</h3>
    		</div>
    		<div class="container">
 		<div class="row">
@@ -94,7 +94,7 @@
 					<div class="card-image waves-effect waves-block waves-light">
 						<img src="{{obj.image.url}}" class="activator" style="height:200px">
 					</div>
-					<span class="card-title center"><h5>{{obj.name}}</h5></span>
+					<span class="card-title center customize-text"><h5>{{obj.name}}</h5></span>
 					<div class="card-content">
 						<p>{{obj.content}}</p>
 					</div>
@@ -107,7 +107,7 @@
 
    	</div>
 
-	<div class="container white hide-on-med-and-down">
+	<div class="container white hide-on-med-and-down" id="testimony-section">
 		<div class="row">
 			<div class="col s12">
 				<ul class="tabs">
@@ -126,7 +126,7 @@
 						</div>
 						<div class="col s10">
 							<p class="black-text">{{teacher.content}}</p>
-							<h6>{{teacher.name}}</h6>
+							<h6 class="c-t">{{teacher.name}}</h6>
 						</div>
 					</div>
 					{% endfor %}
@@ -141,7 +141,7 @@
 						</div>
 						<div class="col s10">
 							<p class="black-text">{{teen.content}}</p>
-							<h6>{{teen.name}}</h6>
+							<h6 class="c-t">{{teen.name}}</h6>
 						</div>
 					</div>
 					{% endfor %}
@@ -155,7 +155,7 @@
 						</div>
 						<div class="col s10">
 							<p class="black-text">{{vol.content}}</p>
-							<h6>{{vol.name}}</h6>
+							<h6 class="c-t">{{vol.name}}</h6>
 						</div>
 					</div>
 					{% endfor %}
@@ -225,16 +225,16 @@
    		<div class="container">
    			<div class="row">
    				<div class="col s12 l4">
-   					<h1>{{len_students}}</h1>
+   					<h1 class="customize-text">{{len_students}}</h1>
    					<h6>African teenagers trained</h6>
 
    				</div>
    				<div class="col s12 l4">
-   					<h1>0</h1>
+   					<h1 class="customize-text">0</h1>
    					<h6>Young coders' club created</h6>
    				</div>
    				<div class="col s12 l4">
-   					<h1>{{len_projects}}</h1>
+   					<h1 class="customize-text">{{len_projects}}</h1>
    					<h6>Projects</h6>
    				</div>
    			</div>
@@ -242,5 +242,31 @@
    	</div>
 
 
+<div class="parallax-container" id="sponsor">
+
+  <div class="section no-pad-bot">
+    <div class="container"  id="psp">
+      <div class="center-align">
+        <h1>Proudly Sponsored by</h1>
+
+        <div class="center-align">
+          <img src="{% static 'img/yin_logo.png' %}" class="spn-logo">
+        </div>
+
+        <p>
+          If you want to partner with us, you can contact us via <span>codefortheyoung@gmail.com</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+   <div  class="parallax">
+      <img src='{{sponsor.image.url}}'>    
+      <div class="effect">
+        
+      </div>
+    </div>
+</div>
 
 {% endblock %}

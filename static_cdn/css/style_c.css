@@ -1,5 +1,18 @@
 
+.caption h3{
+	font-family: Papyrus,fantasy;
+}
 
+#abt-text p{
+	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+
+}
+#abt-text h5{
+	font-family: Impact, Charcoal, sans-serif;
+}
+#nav > .b{
+	color: black;
+}
 .effect{
 	position : absolute; 
 	width : 100%;
@@ -42,7 +55,7 @@
 	font-weight: 900px;
 
 }
-@media only screen and (max-width : 600px) {
+@media only screen and (max-width : 767px) {
 	#abt-body > .img-d{
 		
 
@@ -67,6 +80,22 @@
 	#abt-text h5{
 		text-align: center;
 	}
+
+
+}
+@media only screen and (min-width : 992px) {
+	#psp{
+		margin-top: 80px;
+	}
+}
+
+@media only screen and (max-width : 600px) {
+	#sponsor h1{
+		font-family: Papyrus;
+		font-size: 27px;
+		letter-spacing: 2px;
+	}
+	
 }
 
 .pos-text{
@@ -79,8 +108,17 @@
 
 #teens-project h3{
 	color: white;
+	font-family: Papyrus;
+	font-size: 29px;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bold;
+	line-height: 31.9px;
+	letter-spacing: 5px;
 }
-
+#teens-project p{
+	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+}
 .test-div{
 	margin-top: 20px;
 }
@@ -117,3 +155,49 @@
 	font-weight: bold;
 	font-size: 100%;
 }
+
+#footer{
+	background-color: #212121;
+}
+.c-t{
+	font-weight: bolder;
+}
+#test{
+	color: white;
+}
+
+#sponsor h1{
+	font-family: fantasy;
+	/*font-size: 24px;*/
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bold;
+	line-height: 12px;
+	color: white;
+}
+ .spn-logo{
+ 	height: 100px;
+ 	margin-top: 50px;
+ 	margin-bottom: 50px;
+ }
+ #sponsor p{
+ 	margin-top: -10px;
+ 	font-family: Papyrus, fantasy;
+	font-size: 30px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 48px;
+	color: white;
+ }
+ #sponsor p span{
+ 	color: #2B0000;
+ }
+
+ #testimony-section ul li a{
+ 	color:#2B0000;
+ }
+
+ #testimony-section p{
+ 	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;	
+ }
